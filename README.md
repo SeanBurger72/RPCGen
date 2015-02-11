@@ -339,11 +339,11 @@ Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicaci
 * Generar un nueva especificación RPCGen (Como add.x) en donde se definan dos funciones:
   * La función "agregar" deberá:
     * Recibir un nombre y obtener la fecha con la librería [Date](http://goo.gl/tSrZ46) de C.
-    * Guardar en un archivo .txt la fecha y el nombre.
+    * [Guardar](http://goo.gl/HQeG4H) en un archivo .txt la fecha y el nombre.
     * Retornar un mensaje si los datos se han escrito satisfactoriamente.
   * La función "buscar" deberá:
-    * Recibir un nombre, mediante una búsqueda obtener la fecha relacionada al nombre.
-    * Retornar el la fecha relacionada con el nombre indicado, caso contrario enviar un mensaje de inexistencia.
+    * Recibir un nombre, mediante una [búsqueda](http://stackoverflow.com/a/13450846/1206078) obtener la fecha(s) relacionada(s) al nombre.
+    * Retornar el la fecha relacionada para el nombre indicado y/o el número de registros con el mismo nombre.
 
 Para la parte del cliente, se debe modificar la estructura del main y adecuar el código para ejecutar las funciones y enviar los parámetros.
 
@@ -363,5 +363,38 @@ Francisco Tue Feb 10 22:29:09 2015
 Alejandro Tue Feb 10 22:32:12 2015
 Carlos    Tue Feb 10 22:45:52 2015
 Antonio   Tue Feb 10 22:55:02 2015
+Antonio   Tue Feb 10 22:55:02 2015
+Antonio   Tue Feb 10 22:55:12 2015
+Antonio   Tue Feb 10 22:55:23 2015
 ...
+```
+Ejemplo de input/output función agregar:
+
+```sh
+# En el primer parámetro el número 1 indica la función agregar.
+# En el segundo parámetro se envía el nombre que deseamos guardar.
+$ ./add_client localhost 1 Antonio
+# La respuesta del servidor en el cliente sería:
+$ Server Response: The server added, Antonio Tue Feb 10 22:55:13 2015
+```
+Ejemplo de input/output función buscar:
+```sh
+# En el primer parámetro el número 2 indica la función buscar.
+# En el segundo parámetro se indica el nombre que deseamos buscar.
+$ ./add_client localhost 2 Antonio
+$ Server Response: The server found, Antonio 5 times.
+```
+
+Ejemplos de la respuesta del servidor (agregar):
+
+```sh
+$ ./add_client localhost 1 Antonio
+$ Server added, Antonio Tue Feb 10 22:55:13 2015
+```
+Ejemplos de la respuesta del servidor (buscar):
+
+```sh
+$ ./add_client localhost 2 Antonio
+$ Server is searching for: Antonio
+$ Server found in txt file Antonio 5 times.
 ```
