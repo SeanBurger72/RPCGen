@@ -377,26 +377,26 @@ Ejemplo de input/output función agregar:
 # En el segundo parámetro se envía el nombre que deseamos guardar.
 $ ./add_client localhost 1 Antonio
 # La respuesta del servidor en el cliente sería:
-$ Server Response: The server added, Antonio Tue Feb 10 22:55:13 2015
+Server Response: The server added, Antonio Tue Feb 10 22:55:13 2015
 ```
 Ejemplo de input/output función buscar:
 ```sh
 # En el primer parámetro el número 2 indica la función buscar.
 # En el segundo parámetro se indica el nombre que deseamos buscar.
 $ ./add_client localhost 2 Antonio
-$ Server Response: The server found, Antonio 5 times.
+Server Response: The server found, Antonio 5 times.
 ```
 
 Ejemplos de la respuesta del servidor (agregar):
 
 ```sh
 $ ./add_client localhost 1 Antonio
-$ Server added, Antonio Tue Feb 10 22:55:13 2015
+Server added, Antonio Tue Feb 10 22:55:13 2015
 ```
 Ejemplos de la respuesta del servidor (buscar):
 
 ```sh
 $ ./add_client localhost 2 Antonio
-$ Server is searching for: Antonio
-$ Server found in txt file Antonio 5 times.
+Server is searching for: Antonio
+Server found in txt file Antonio 5 times.
 ```
