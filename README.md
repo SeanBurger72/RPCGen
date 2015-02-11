@@ -9,13 +9,14 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
 2. **[Actividad 1 - Primeros Pasos](#primerospasos)**
   1. [Interfaz RPC](#creainterfaz)
   2. [Generar código](#generarstub)
-  3. [Primeras Pruebas](#antesde)
-  4. [Programar el Servidor](#antesde)
-  5. [Programar el Cliente](#antesde)
-  6. [Limpieza](#antesde)
-3. **[Actividad 2 - Interacción cliente-servidor](#antesde)**
-  1. [Descripción de la actividad](#antesde)
-  2. [Ejemplos](#antesde)
+  3. [Primeras Pruebas](#primerapureba)
+  4. [Programar el Servidor](#workingserver)
+  5. [Programar el Cliente](#betterclient)
+  6. [Limpieza](#cleaning)
+  7. [One last thing](#onelast)
+3. **[Actividad 2 - Interacción cliente-servidor](#activity2)**
+  1. [Descripción de la actividad](#description2)
+  2. [Ejemplos](#examples2)
 
 # <a name="antesde"></a>Antes de comenzar
 #### <a name="herramientas"></a>Herramientas Necesarias
@@ -55,7 +56,7 @@ Esta es la función stub del cliente que implementa la función **suma_1**, crea
 #####suma_xdr.c
 El archivo **_xdr.c** no siempre se genera depende de los parámetros utilizados para procedimientos remotos. Este archivo contiene código para reunir parámetros para la estructura **intpair**. Utiliza **XDR (External Data Representation)** para convertir los dos enteros a un formato estándar.
 
-#### 3. Primera prueba
+#### 3. <a name="primeraprueba"></a>Primera prueba
 Modificamos el archivo **suma_server.c**, localizamos la línea en donde se menciona *"Insert server code here"* y agregamos lo siguiente:
 ```c
 /*
@@ -99,7 +100,7 @@ Si revisamos la terminal en donde se encuentra ejecutándose el proceso del serv
 
 Si quisieramos llamar el proceso desde otra computadora tendríamos que especificar la ubicación del cliente en lugar de **"localhost"**.
 
-#### 4. Pongamos a trabajar al servidor
+#### 4. <a name="workingserver"></a>Pongamos a trabajar al servidor
 Ahora que verificamos que el servidor y el cliente se comunican es momento de poner a trabajar al servidor. Editamos el archivo **suma_client.c**. Aquí debemos observar que la función **suma_prog_1** define la variable **suma_1_arg** este parámetro se envía al proceso remoto unas líneas después mediante:
 ```sh
 result_1 = suma_1(&suma_1_arg, clnt);
@@ -166,7 +167,7 @@ Compilar con **make**, ejecutar el **servidor** y **cliente** nuevamente.
 Ahora deberíamos observar los resultados en el **servidor** y la **respuesta** en el **cliente**.
 
 Ahora tenemos un servidor funcional.
-#### 5. Haciendo un mejor cliente
+#### <a name="betterclient"></a>5. Haciendo un mejor cliente
 Para tener un mejor cliente debemos hacer que nuestro programa sume dos numeros directamente desde la consola, actualmente nuestros números se ingresan desde el código fuente, para lograr esto debemos hacer algunos cambios en **suma_client.c**:  
 Cambiamos la faunción **suma_prog_1** para que acepte dos parámetros:
 ```c
@@ -214,7 +215,7 @@ Debería mostrar:
 result = 12
 ```
 ¡El programa funciona completamente, felicidades!
-#### 6. Limpieza
+#### 6. <a name="cleaning"></a>Limpieza
 Ésta es la parte mas importante de la actividad, pues limpiar el código nos permitirá comprender de mejor manera la esctructura del **RPC**.
 
 * Identifica los archivos de cliente y servidor generados por RPCGen, comenta en el código tus observaciones. ¿Los nombres de variables son comprensibles?
@@ -304,7 +305,7 @@ suma_1_svc(intpair *argp, struct svc_req *rqstp)
 	return &result;
 }
 ```
-### One last thing...
+### <a name="onelast"></a>7. One last thing...
 Revisemos el makefile, desafortunadamente el generado por RPCGen no es fácil de comprender, revisemos uno creado por nosotros mismos. Anota en el reporte tus comentarios al respecto
 ```sh
 CC = gcc
@@ -350,8 +351,8 @@ clean:
 	rm -f suma_client suma_client.o suma_server suma_server.o suma_clnt.* suma_svc.* suma.h
 ```
 
-# Actividad 2 - Interacción cliente-servidor
-### Descripción de la actividad
+# <a name="activity2"></a>Actividad 2 - Interacción cliente-servidor
+#### <a name="description2"></a>Descripción de la actividad
 Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicación, los objetivos son los siguientes:  
 * Generar un nueva especificación RPCGen (Como add.x) en donde se definan dos funciones:
   * La función "agregar" deberá:
@@ -365,7 +366,7 @@ Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicaci
 ), en cuanto a limpieza del código y comentarios.
 
 Para la parte del cliente, se debe modificar la estructura del main y adecuar el código para ejecutar las funciones y enviar los parámetros.
-### Ejemplos:
+#### <a name="examples2"></a>Ejemplos:
 Aquí un ejemplo de la definición de dos funciones con RPCGen:
 
 ```C
