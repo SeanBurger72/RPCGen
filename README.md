@@ -344,6 +344,8 @@ Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicaci
   * La función "buscar" deberá:
     * Recibir un nombre, mediante una [búsqueda](http://stackoverflow.com/a/13450846/1206078) obtener la fecha(s) relacionada(s) al nombre.
     * Retornar el la fecha relacionada para el nombre indicado y/o el número de registros con el mismo nombre.
+    * Realizar el [paso 6 de la actividad 1](http://goo.gl/Qm2m59
+), en cuanto a limpieza del código y comentarios.
 
 Para la parte del cliente, se debe modificar la estructura del main y adecuar el código para ejecutar las funciones y enviar los parámetros.
 
