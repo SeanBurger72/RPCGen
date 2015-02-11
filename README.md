@@ -357,3 +357,11 @@ program ADD_PROG {
    } = 1;
 } = 0x23451111;
 ```
+Ejemplo del archivo txt:
+```txt
+Francisco Tue Feb 10 22:29:09 2015
+Alejandro Tue Feb 10 22:32:12 2015
+Carlos    Tue Feb 10 22:45:52 2015
+Antonio   Tue Feb 10 22:55:02 2015
+...
+```
