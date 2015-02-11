@@ -17,12 +17,13 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
   1. Descripción de la actividad
   2. Ejemplos
 
-### Herramientas Necesarias
+# Antes de comenzar
+#### Herramientas Necesarias
 * Sun RPCGEN.
 * GCC Compiler.
 * Ubuntu Linux.
 
-### Instrucciones de instalación:
+#### Instrucciones de instalación:
 En la terminal de Ubuntu ejecutar los siguientes comandos:
 ```sh
 $ sudo apt-get install build-essential
@@ -33,7 +34,7 @@ $ sudo apt-get install rpcbind
 * Crear una aplicación distribuída usando **RPCGEN**.
 * Reconocer el proceso de distribución de aplicaciones en general para abordar situaciones más complejas.
 
-### 1. Crear la interfaz que define al RPC
+#### 1. Crear la interfaz que define al RPC
 Dentro de la carpeta **distribuida** en el repositorio https://github.com/Innova4D/RPCGen se encuentra el archivo **suma.x**
 Revisar el archivo **suma.x**, en este archivo se especifican las variables y el comportamiento del cliente-servidor.  
 #### 2. Generar el código del cliente y servidor
