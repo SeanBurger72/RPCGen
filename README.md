@@ -2,6 +2,18 @@
 Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir de una especificación se crea código en C que permite inicializar un cliente y servidor.
 >En 1984 Birrell y Nelson introducen una forma novedosa para administrar la comunicación entre un cliente y servidor, con una idea realmente simple. Ellos proponen permitir a los programas llamar procedimientos localizados en otras computadoras, cuando un proceso en una máquina (A) llama a un proceso en un máquena (B) el proceso en (A) es suspendido, la ejecución completa del procedimiento toma lugar en (B). La información es enviada en parametros y regresa a través del resultado del proceso, ningún tipo de envío de mensajes es visible por el programador. A ésta metodología se le conoce como Remote Procedure Call, RPC.
 
+# Contenido
+* ###Actividad 1 - Primeros Pasos
+    1. Interfaz RPC
+    2. Generar código
+    3. Primeras Pruebas
+    4. Programar el Servidor
+    5. Programar el Cliente
+    6. Limpieza
+* ###Actividad 2 - Interacción cliente-servidor
+    1. Descripción de la actividad
+    2. Ejemplos
+
 ### Herramientas Necesarias
 * Sun RPCGEN.
 * GCC Compiler.
@@ -14,7 +26,7 @@ $ sudo apt-get install build-essential
 $ sudo apt-get install rpcgen
 $ sudo apt-get install rpcbind
 ```
-# Actividad 1
+# Actividad 1 - Primeros Pasos
 * Crear una aplicación distribuída usando **RPCGEN**.
 * Reconocer el proceso de distribución de aplicaciones en general para abordar situaciones más complejas.
 
@@ -334,7 +346,8 @@ clean:
 	rm -f suma_client suma_client.o suma_server suma_server.o suma_clnt.* suma_svc.* suma.h
 ```
 
-# Actividad 2
+# Actividad 2 - Interacción cliente-servidor
+### Descripción de la actividad
 Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicación, los objetivos son los siguientes:  
 * Generar un nueva especificación RPCGen (Como add.x) en donde se definan dos funciones:
   * La función "agregar" deberá:
@@ -348,7 +361,7 @@ Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicaci
 ), en cuanto a limpieza del código y comentarios.
 
 Para la parte del cliente, se debe modificar la estructura del main y adecuar el código para ejecutar las funciones y enviar los parámetros.
-
+### Ejemplos:
 Aquí un ejemplo de la definición de dos funciones con RPCGen:
 
 ```C
