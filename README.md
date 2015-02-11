@@ -4,11 +4,11 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
 
 # Contenido
 1. **[Antes de comenzar](#antesde)**
-  1. [Herramientas Necesarias](#antesde)
-  2. [Instrucciones de Instalación](#antesde)
-2. **[Actividad 1 - Primeros Pasos](#antesde)**
-  1. [Interfaz RPC](#antesde)
-  2. [Generar código](#antesde)
+  1. [Herramientas Necesarias](#herramientas)
+  2. [Instrucciones de Instalación](#instruccionesinstal)
+2. **[Actividad 1 - Primeros Pasos](#primerospasos)**
+  1. [Interfaz RPC](#creainterfaz)
+  2. [Generar código](#generarstub)
   3. [Primeras Pruebas](#antesde)
   4. [Programar el Servidor](#antesde)
   5. [Programar el Cliente](#antesde)
@@ -18,26 +18,26 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
   2. [Ejemplos](#antesde)
 
 # <a name="antesde"></a>Antes de comenzar
-#### Herramientas Necesarias
+#### <a name="herramientas"></a>Herramientas Necesarias
 * Sun RPCGEN.
 * GCC Compiler.
 * Ubuntu Linux.
 
-#### Instrucciones de instalación:
+#### <a name="instruccionesinstal"></a>Instrucciones de instalación:
 En la terminal de Ubuntu ejecutar los siguientes comandos:
 ```sh
 $ sudo apt-get install build-essential
 $ sudo apt-get install rpcgen
 $ sudo apt-get install rpcbind
 ```
-# Actividad 1 - Primeros Pasos
+# <a name="primerospasos"></a>Actividad 1 - Primeros Pasos
 * Crear una aplicación distribuída usando **RPCGEN**.
 * Reconocer el proceso de distribución de aplicaciones en general para abordar situaciones más complejas.
 
-#### 1. Crear la interfaz que define al RPC
+#### <a name="creainterfaz"></a>1. Crear la interfaz que define al RPC
 Dentro de la carpeta **distribuida** en el repositorio https://github.com/Innova4D/RPCGen se encuentra el archivo **suma.x**
 Revisar el archivo **suma.x**, en este archivo se especifican las variables y el comportamiento del cliente-servidor.  
-#### 2. Generar el código del cliente y servidor
+#### <a name="generarstub"></a>2. Generar el código del cliente y servidor
 Estos comandos generan el esqueleto de la aplicación distribuída, en donde podemos observar que se han creado los archivos para inicializar un cliente y un servidor.  
 ```sh
 $ rpcgen -a -C suma.x
@@ -385,6 +385,7 @@ Antonio   Tue Feb 10 22:55:02 2015
 Antonio   Tue Feb 10 22:55:02 2015
 Antonio   Tue Feb 10 22:55:12 2015
 Antonio   Tue Feb 10 22:55:23 2015
+Antonio   Tue Feb 10 22:56:02 2015
 ...
 ```
 Ejemplo de input/output función agregar:
