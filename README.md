@@ -419,3 +419,5 @@ $ ./add_client localhost 2 Antonio
 Server is searching for: Antonio
 Server found in txt file Antonio 5 times.
 ```
+
+* Cualquier comentario o duda, pueden discutir en la sección de [issues](https://github.com/Innova4DLab/RPCGen/issues).
