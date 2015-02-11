@@ -3,14 +3,14 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
 >En 1984 Birrell y Nelson introducen una forma novedosa para administrar la comunicación entre un cliente y servidor, con una idea realmente simple. Ellos proponen permitir a los programas llamar procedimientos localizados en otras computadoras, cuando un proceso en una máquina (A) llama a un proceso en un máquena (B) el proceso en (A) es suspendido, la ejecución completa del procedimiento toma lugar en (B). La información es enviada en parametros y regresa a través del resultado del proceso, ningún tipo de envío de mensajes es visible por el programador. A ésta metodología se le conoce como Remote Procedure Call, RPC.
 
 # Contenido
-1. Actividad 1 - Primeros Pasos
+1. **Actividad 1 - Primeros Pasos**
     1. Interfaz RPC
     2. Generar código
     3. Primeras Pruebas
     4. Programar el Servidor
     5. Programar el Cliente
     6. Limpieza
-2. Actividad 2 - Interacción cliente-servidor
+2. **Actividad 2 - Interacción cliente-servidor**
     1. Descripción de la actividad
     2. Ejemplos
 
