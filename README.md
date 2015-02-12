@@ -27,6 +27,7 @@ Es un pre-compilador generador de interfaces en C desarrollado por Sun. A partir
 #### <a name="instruccionesinstal"></a>Instrucciones de instalación:
 En la terminal de Ubuntu ejecutar los siguientes comandos:
 ```sh
+$ sudo apt-get update
 $ sudo apt-get install build-essential
 $ sudo apt-get install rpcgen
 $ sudo apt-get install rpcbind
