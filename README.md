@@ -361,7 +361,7 @@ Ahora que ya sabemos como trabajar con RPCGen vamos a generar una nueva aplicaci
     * [Guardar](http://goo.gl/HQeG4H) en un archivo .txt la fecha y el nombre.
     * Retornar un mensaje si los datos se han escrito satisfactoriamente.
   * La función "buscar" deberá:
-    * Recibir un nombre, mediante una [búsqueda](http://stackoverflow.com/a/13450846/1206078) obtener la fecha(s) relacionada(s) al nombre.
+    * Recibir un nombre, mediante una [búsqueda](http://stackoverflow.com/a/13450846/1206078) [obtener](http://stackoverflow.com/a/3501681/1206078) la fecha(s) relacionada(s) al nombre.
     * Retornar el la fecha relacionada para el nombre indicado y/o el número de registros con el mismo nombre.
     * Realizar el [paso 6 de la actividad 1](http://goo.gl/Qm2m59
 ), en cuanto a limpieza del código y comentarios.
